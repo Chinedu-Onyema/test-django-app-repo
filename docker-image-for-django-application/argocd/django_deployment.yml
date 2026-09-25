@@ -5,7 +5,7 @@ metadata:
   labels:
     app: django-argocd-app                  # name of the label you want to give your created pods
 spec:
-  replicas: 2                                  # number of pods to create
+  replicas: 3                                  # number of pods to create
   selector:
     matchLabels:
       app: django-argocd-app                # use the name of the label as the selector
@@ -17,7 +17,7 @@ spec:
       containers:
       - name: django-argocd-application            # the container name for the created django image
 
-        image: portfolio-website:734b8f2
+        image: portfolio-website:bc0b135
 
         imagePullPolicy: Never              # this tells kubernetes to use the image provided locally in your terminal 
                                             # instead of pulling directly from docker hub. if you want to pull from 
