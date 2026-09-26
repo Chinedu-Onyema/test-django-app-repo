@@ -1,4 +1,5 @@
 #!/bin/bash
+git pull origin main
 
 DOCKERHUB_USERNAME="edunaking"           # replace with your dockerhub username 
                                                        # for example edunaking
