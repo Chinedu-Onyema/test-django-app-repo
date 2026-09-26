@@ -16,8 +16,8 @@ docker push $DOCKERHUB_USERNAME/portfolio-website:$TAG           # push your dja
 
 
 # after every new git commit, use the latest git commit id and tag is to the django_service_deployment.yml file 
-sed -i "s|image: .*/portfolio-website:.*|image: $DOCKERHUB_USERNAME/portfolio-website:$TAG|" docker-image-for-django-application/django_deployment.yml
+sed -i "s|image: .*/portfolio-website:.*|image: $DOCKERHUB_USERNAME/portfolio-website:$TAG|" docker-image-for-django-application/argocd/django_deployment.yml
 
-git add django_deployment.yml              # add only the django_service_deployment.yml file
+git add docker-image-for-django-application/argocd/django_deployment.yml              # add only the django_service_deployment.yml file
 git commit -m "Deploy new tag to argocd"           # commit the changes made above 
 git push                                           # push changes to GitHub
