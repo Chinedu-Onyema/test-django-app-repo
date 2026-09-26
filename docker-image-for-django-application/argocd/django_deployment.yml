@@ -15,11 +15,10 @@ spec:
         app: django-argocd-app              # this tags every created pod with django-argocd-app tag
     spec:
       containers:
-      - name: django-argocd-application            # the container name for the created django image
+      - name: django-argocd-application            # the container name for the created django
+        image: edunaking/portfolio-website:734b8f2                  # the created django docker image in my cluster
 
-        image: portfolio-website:bc0b135
-
-        imagePullPolicy: Never              # this tells kubernetes to use the image provided locally in your terminal 
+        # imagePullPolicy: Never              # this tells kubernetes to use the image provided locally in your terminal 
                                             # instead of pulling directly from docker hub. if you want to pull from 
                                             # docker hub, then comment image pull policy 
                                                         
