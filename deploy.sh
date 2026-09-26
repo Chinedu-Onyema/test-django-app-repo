@@ -8,9 +8,8 @@ DOCKERHUB_USERNAME="edunaking"           # replace with your dockerhub username
 TAG=$(git rev-parse --short HEAD)                      # use the TAG environment variable to tag 
                                                        # your latest git commit  
 
-
-docker build -t $DOCKERHUB_USERNAME/portfolio-website:$TAG .     # build and tag your django app image name
-                                                                 # with the latest git commit id
+# build and tag your django app image name with the latest git commit id
+docker build -t $DOCKERHUB_USERNAME/portfolio-website:$TAG -f docker-image-for-django-application/Dockerfile/docker-image-for-django-application/
 
 docker push $DOCKERHUB_USERNAME/portfolio-website:$TAG           # push your django app image name to dockerhub
 
