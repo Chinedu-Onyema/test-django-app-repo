@@ -11,7 +11,7 @@ TAG=$(git rev-parse --short HEAD)                      # use the TAG environment
                                                        # your latest git commit  
 
 # build and tag your django app image name with the latest git commit id
-docker build -t $DOCKERHUB_USERNAME/portfolio-website:$TAG -f docker-image-for-django-application/Dockerfile/docker-image-for-django-application/
+docker build -t $DOCKERHUB_USERNAME/portfolio-website:$TAG -f docker-image-for-django-application/Dockerfile docker-image-for-django-application/
 
 docker push $DOCKERHUB_USERNAME/portfolio-website:$TAG           # push your django app image name to dockerhub
 
